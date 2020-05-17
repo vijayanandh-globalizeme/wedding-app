@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">Post your Wishes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="ionicForm" (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="name" type="text" ></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+         Name is required.
+      </span>
+
+      <ion-item>
+        <ion-label position="floating">Mobile</ion-label>
+        <ion-input formControlName="mobile" type="number" >
+        </ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.required">
+         Mobile number is required.
+      </span>
+
+      <ion-item>
+        <ion-label position="floating">Your wishes</ion-label>
+        <ion-textarea formControlName="content"></ion-textarea>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.content.errors?.required">
+        Content is required.
+      </span>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" [disabled]="isSubmitDisable" color="primary" shape="full" expand="block">Post</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
