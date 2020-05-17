@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { WishesService } from '../../services/wishes.service';
 import { AlertController } from '@ionic/angular';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @Component({
   selector: 'app-add-wishes',
@@ -14,12 +15,14 @@ export class AddWishesPage implements OnInit {
   ionicForm: FormGroup;
   isSubmitted = false;
   isSubmitDisable = false;
+  captureDataUrl: string;
 
   constructor(
     private wishService: WishesService,
     private router: Router,
     public alertController: AlertController, 
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    private camera: Camera
   ) { }
 
   ngOnInit() {
@@ -66,6 +69,23 @@ export class AddWishesPage implements OnInit {
       }],
     });
     await alert.present();
+  }
+
+  getPicture(sourceType){
+    const cameraOptions: CameraOptions = {
+      quality: 50,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: sourceType
+    };
+
+    this.camera.getPicture(cameraOptions)
+     .then((captureDataUrl) => {
+       this.captureDataUrl = 'data:image/jpeg;base64,' + captureDataUrl;
+    }, (err) => {
+        console.log(err);
+    });
   }
 
 }
