@@ -14,12 +14,20 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+// Modal template
+import { WishesModalPage } from './modals/wishes-modal/wishes-modal.page';
+
 // environment
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    AppComponent,
+    WishesModalPage
+  ],
+  entryComponents: [
+    WishesModalPage
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

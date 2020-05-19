@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WishesService } from '../../services/wishes.service';
+import { WishesModalPage } from '../../modals/wishes-modal/wishes-modal.page';
+import { ModalController } from '@ionic/angular'; 
 import * as moment from 'moment-timezone';
 
 @Component({
@@ -13,7 +15,8 @@ export class WishesListPage implements OnInit {
   moment: any = moment;
 
   constructor(
-    private wishService: WishesService
+    private wishService: WishesService,
+    public modalController: ModalController,
   ) { }
 
   ngOnInit() {
@@ -34,5 +37,14 @@ export class WishesListPage implements OnInit {
         };
       })
     });
+  }
+
+  //SOs alert
+  async wishModal(){
+    const modal = await this.modalController.create({
+      component: WishesModalPage,
+      cssClass: 'WishesModalPage',
+    });
+    return await modal.present();
   }
 }
