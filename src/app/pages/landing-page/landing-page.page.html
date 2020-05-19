@@ -24,20 +24,39 @@
     </div>
 
     <ion-grid>
-      <ion-row justify-content-center>
-        <ion-col class="timer-sec ion-align-self-center" size="8">
-          <span> {{counter.days}}D </span>- <span> {{counter.hours}}H </span>
-          <span> {{counter.minutes}}M </span>
-          <span> {{counter.seconds}}S </span>
+      <ion-row class="ion-justify-content-center" text-center>
+        <ion-col class="timer-sec ion-align-self-center" size="10">
+          <div class="d-flex justify-space-between timer-container">
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.days}}<span class="time-measure">Days</span>
+              </span>
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.hours}}<span class="time-measure">Hrs</span></span
+              >
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.minutes}}<span class="time-measure">Min</span></span
+              >
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.seconds}}<span class="time-measure">Sec</span></span
+              >
+            </p>
+          </div>
         </ion-col>
       </ion-row>
+      <ion-row class="ion-justify-content-end btn-right">
+        <ion-buttons>
+          <ion-button routerLink="/index" color="primary" class="explore-btn"
+            >Explore <ion-icon class="white-right-arrow"></ion-icon
+          ></ion-button>
+        </ion-buttons>
+      </ion-row>
     </ion-grid>
-    <div class="btn-right">
-      <ion-buttons slot="start">
-        <ion-button routerLink="/index" color="primary" class="explore-btn"
-          >Explore <ion-icon name="arrow-dropright"></ion-icon
-        ></ion-button>
-      </ion-buttons>
-    </div>
   </div>
 </ion-content>

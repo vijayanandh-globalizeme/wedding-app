@@ -4,7 +4,6 @@
 
 .main-layout {
   height: 100%;
-  font-family: "Italianno", cursive;
   ion-row {
     height: 100%;
     .half-bg {
@@ -18,7 +17,7 @@
   bottom: 0;
   margin: auto;
   left: 0;
-  top: 9%;
+  top: 1%;
   right: 0;
   width: 85%;
   img {
@@ -29,15 +28,53 @@
   .timer-sec {
     background: #fff;
     padding: 0.5rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
+    -moz-box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
+    box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
+    .time-size {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--ion-nav-btn-color);
+      margin: 0;
+      flex: 1;
+      border-right: 1px solid var(--ion-grey-color);
+      .time-value {
+        text-align: center;
+        display: block;
+      }
+      .time-measure {
+        display: block;
+        font-size: 1rem;
+        color: var(--ion-grey-color);
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+    .time-size:last-of-type {
+      border-right: 0;
+    }
   }
+
   .btn-right {
     text-align: right;
+    margin: 1rem 0 0 0;
     .explore-btn {
-      color: #fff;
+      --ion-color-base: #fff !important;
       background-color: var(--ion-nav-btn-color);
-      font-size: 1.2rem;
-      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      border-radius: 14px;
       font-weight: bold;
+      height: auto;
+      .white-right-arrow {
+        width: 1.2rem;
+        margin-left: 1px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../../../assets/img/right-white-arrow.png);
+        display: inline-block;
+      }
     }
   }
 }

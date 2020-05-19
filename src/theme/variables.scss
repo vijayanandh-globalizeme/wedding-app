@@ -2,13 +2,15 @@
 // http://ionicframework.com/docs/theming/
 // @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;562;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /** Ionic CSS Variables **/
 :root {
   /** Marriage App V4 **/
   --ion-white-color: #ffffff;
   --ion-primary-color: #d0dbd7;
   --ion-nav-btn-color: #9fc9c0;
-  --ion-font-family: "Dancing Script", cursive;
+  --ion-grey-color: #cccccc;
+  --ion-font-family: "Montserrat", sans-serif;
 }
 /* common css starts */
 ion-col {
@@ -20,8 +22,21 @@ ion-row {
 ion-grid {
   padding: 0;
 }
+.d-flex {
+  display: flex;
+}
+.justify-space-even {
+  justify-content: space-evenly;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
 /* nav bar design */
 .nav-bar {
   --background: var(--ion-nav-btn-color);
   color: var(--ion-white-color);
+  font-family: "Dancing Script", cursive;
 }
