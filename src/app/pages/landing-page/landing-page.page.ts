@@ -8,7 +8,7 @@ import * as moment from 'moment-timezone';
 })
 export class LandingPagePage implements OnInit {
 
-  mDate = new Date('May 18, 2020 15:18:00').getTime();
+  mDate = new Date('May 28, 2020 15:18:00').getTime();
   counter:any = [];
   moment: any = moment;
 

@@ -14,7 +14,7 @@
   
 
   <ion-list>
-    <ion-item class="item ios in-list ion-focusable item-label hydrated"  [hidden]="!item" *ngFor="let item of wArray; let i = index">
+    <ion-item class="item ios in-list ion-focusable item-label hydrated"  [hidden]="!item" *ngFor="let item of wArray; let i = index" (click)="wishModal()">
       <ion-avatar slot="start" class="ios hydrated">
         <img src="../../../assets/images/avatar-yoda.png">
       </ion-avatar>
