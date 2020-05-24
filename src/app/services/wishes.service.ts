@@ -37,11 +37,14 @@ export class WishesService {
 
   // Get List
   getWishesList(): Observable<any> {
-    return this.firestore.collection(this.collectionName).snapshotChanges();
+    return this.firestore.collection('wishes', 
+      ref => ref.where('status', '==', true).orderBy('createdAt','desc')
+    ).snapshotChanges();
   }
 
   //To refresh wishes list
   updateWishesList(){
     this.subjectElem.next();
   }
+
 }

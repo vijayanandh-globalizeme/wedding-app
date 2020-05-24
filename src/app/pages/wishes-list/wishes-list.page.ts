@@ -22,9 +22,7 @@ export class WishesListPage implements OnInit {
 
   getWishes(){
     this.wishService.getWishesList().subscribe(data => {
-      this.wArray = data.filter(e => {
-        return e.payload.doc.data()['status'] === true;
-      }).map(e => {
+      this.wArray = data.map(e => {
         return {
           id: e.payload.doc.id,
           name:  e.payload.doc.data()['name'],
@@ -32,7 +30,7 @@ export class WishesListPage implements OnInit {
           status: e.payload.doc.data()['status'],
           createdAt: e.payload.doc.data()['createdAt'],
         };
-      }).sort((a, b) => b.createdAt - a.createdAt );
+      });
     });
   }
 
