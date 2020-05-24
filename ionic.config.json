@@ -1,5 +1,7 @@
 {
   "name": "weddingApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

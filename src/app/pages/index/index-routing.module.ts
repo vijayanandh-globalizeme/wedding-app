@@ -21,6 +21,10 @@ const routes: Routes = [
         path: 'wishes-list',
         loadChildren: () => import('../wishes-list/wishes-list.module').then( m => m.WishesListPageModule)
       },
+      {
+        path: 'add-wishes',
+        loadChildren: () => import('../add-wishes/add-wishes.module').then( m => m.AddWishesPageModule)
+      }
     ]
   }
 ];

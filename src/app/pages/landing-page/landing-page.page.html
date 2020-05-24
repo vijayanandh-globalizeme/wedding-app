@@ -1,12 +1,62 @@
+<!-- <ion-header>
+  <ion-toolbar class="nav-bar">
+    <ion-title>
+      Karthick weds Hephsibha
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
 
 <ion-content>
-<h1>Timer</h1>
+  <ion-grid class="main-layout" ion-no-padding no-margin>
+    <ion-row no-padding>
+      <ion-col col-12 no-padding>
+        <ion-row class="full-row-layout">
+          <ion-col col-6 no-padding class="half-bg"></ion-col>
+          <ion-col col-6 no-padding></ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-<p>
-  <span> {{counter.days}}D </span>
-  -<span> {{counter.hours}}H </span>
-  -<span> {{counter.minutes}}M </span>
-  -<span> {{counter.seconds}}S </span>
-</p>
-<ion-button routerLink="/index" color="primary">Explore</ion-button>
+  <div class="center-image-sec">
+    <div class="center-image">
+      <img src="../../assets/img/CM-BG-059-1.jpg" />
+    </div>
+
+    <ion-grid>
+      <ion-row class="ion-justify-content-center" text-center>
+        <ion-col class="timer-sec ion-align-self-center" size="10">
+          <div class="d-flex justify-space-between timer-container">
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.days}}<span class="time-measure">Days</span>
+              </span>
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.hours}}<span class="time-measure">Hrs</span></span
+              >
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.minutes}}<span class="time-measure">Min</span></span
+              >
+            </p>
+            <p class="time-size">
+              <span class="time-value">
+                {{counter.seconds}}<span class="time-measure">Sec</span></span
+              >
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-end btn-right">
+        <ion-buttons>
+          <ion-button routerLink="/index" color="primary" class="explore-btn"
+            >Explore <ion-icon class="white-right-arrow"></ion-icon
+          ></ion-button>
+        </ion-buttons>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
