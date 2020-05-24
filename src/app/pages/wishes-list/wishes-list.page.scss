@@ -9,6 +9,31 @@
     .align-text-right{
         text-align: right;
     }
-    .text-collapse{
-        white-space: normal !important;
+    .fn-container{
+        font-size: 26px;
+        font-weight: 600;
+        background: red;
+        border-radius: 50%;
+        color: #ffff;
+        height: 40px;
+        width: 40px;
+        display: block;
+        text-align: center;
+        padding-top: 3px;
+    }
+    ion-list{
+        ion-item:nth-child(5n+1) .fn-container { background: #CE4653; }
+        ion-item:nth-child(5n+2) .fn-container { background: #FFD046; }
+        ion-item:nth-child(5n+3) .fn-container{ background: #FF8C44; }
+        ion-item:nth-child(5n+4) .fn-container{ background: #1E294F; }
+        ion-item:nth-child(5n+5) .fn-container{ background: #960034; }
+        ion-item:nth-child(5n+6) .fn-container{ background: #B99FB3; }
+        ion-item:nth-child(5n+7) .fn-container{ background: #F8BB7F; }
+        ion-item:nth-child(5n+8) .fn-container { background: #303960; }
+        ion-item:nth-child(5n+9) .fn-container { background: #f96d80; }
+        ion-item:nth-child(5n+10) .fn-container{ background: #aacfcf; }
+
+        ion-item.active .text-collapse{
+            white-space: normal !important;
+        }
     }

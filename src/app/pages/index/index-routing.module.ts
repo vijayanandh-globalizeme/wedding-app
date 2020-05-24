@@ -24,6 +24,22 @@ const routes: Routes = [
       {
         path: 'add-wishes',
         loadChildren: () => import('../add-wishes/add-wishes.module').then( m => m.AddWishesPageModule)
+      },
+      {
+        path: 'bride-page',
+        loadChildren: () => import('../bride-page/bride-page.module').then( m => m.BridePagePageModule)
+      },
+      {
+        path: 'groom-page',
+        loadChildren: () => import('../groom-page/groom-page.module').then( m => m.GroomPagePageModule)
+      },
+      {
+        path: 'photos',
+        loadChildren: () => import('../photos/photos.module').then( m => m.PhotosPageModule)
+      },
+      {
+        path: 'wedding-event',
+        loadChildren: () => import('../wedding-event/wedding-event.module').then( m => m.WeddingEventPageModule)
       }
     ]
   }

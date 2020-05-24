@@ -97,3 +97,33 @@ ion-grid {
   color: var(--ion-white-color);
   font-family: "Dancing Script", cursive;
 }
+
+// Icon Set
+.c-icon{  
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+}
+
+.c-icon.icon-calender{
+  background-image: url("../assets/icon/calendar.svg");
+}
+.c-icon.icon-images{
+  background-image: url("../assets/icon/images.svg");
+}
+.c-icon.icon-home{
+  background-image: url("../assets/icon/home.svg");
+}
+.c-icon.icon-pushpin{
+  background-image: url("../assets/icon/pushpin.svg");
+}
+.c-icon.icon-man{
+  background-image: url("../assets/icon/man.svg");
+}
+.c-icon.icon-woman{
+  background-image: url("../assets/icon/woman.svg");
+}
+.c-icon.icon-wish{
+  background-image: url("../assets/icon/telegram.svg");
+}

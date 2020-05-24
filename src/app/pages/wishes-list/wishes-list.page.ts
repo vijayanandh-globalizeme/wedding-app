@@ -11,7 +11,6 @@ export class WishesListPage implements OnInit {
 
   wArray:any = [];
   moment: any = moment;
-  isCollapse: boolean;
 
   constructor(
     private wishService: WishesService
@@ -33,14 +32,11 @@ export class WishesListPage implements OnInit {
           status: e.payload.doc.data()['status'],
           createdAt: e.payload.doc.data()['createdAt'],
         };
-      })
+      }).sort((a, b) => b.createdAt - a.createdAt );
     });
   }
 
-  toggleWish(){
-    if(this.isCollapse){
-      return this.isCollapse = false;
-    }
-    return this.isCollapse = true;
+  toggleWish(item){
+    item.active = !item.active;
   }
 }
