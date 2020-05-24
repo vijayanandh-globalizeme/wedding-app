@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WishesService } from '../../services/wishes.service';
-import { WishesModalPage } from '../../modals/wishes-modal/wishes-modal.page';
-import { ModalController } from '@ionic/angular'; 
 import * as moment from 'moment-timezone';
 
 @Component({
@@ -13,10 +11,10 @@ export class WishesListPage implements OnInit {
 
   wArray:any = [];
   moment: any = moment;
+  isCollapse: boolean;
 
   constructor(
-    private wishService: WishesService,
-    public modalController: ModalController,
+    private wishService: WishesService
   ) { }
 
   ngOnInit() {
@@ -39,12 +37,10 @@ export class WishesListPage implements OnInit {
     });
   }
 
-  //SOs alert
-  async wishModal(){
-    const modal = await this.modalController.create({
-      component: WishesModalPage,
-      cssClass: 'WishesModalPage',
-    });
-    return await modal.present();
+  toggleWish(){
+    if(this.isCollapse){
+      return this.isCollapse = false;
+    }
+    return this.isCollapse = true;
   }
 }
