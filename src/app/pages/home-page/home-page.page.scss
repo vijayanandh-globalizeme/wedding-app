@@ -1,0 +1,17 @@
+ion-content {
+    background-size: cover;
+    --background   : url('../../../assets/img/img.jpeg') 0 0/100% 100% no-repeat;
+
+    .footer_text {
+        p {
+            background: #ffffff;
+            padding   : 10px;
+            position  : absolute;
+            bottom    : 0;
+            width: 90%;
+            left: 50%;
+            transform: translate(-50%,0%);
+            opacity: 0.7;
+        }
+    }
+}
