@@ -8,8 +8,6 @@ import { PhotosPageRoutingModule } from './photos-routing.module';
 
 import { PhotosPage } from './photos.page';
 
-// Import NgMasonryGridModule
-import { MasonryGalleryModule } from 'ngx-masonry-gallery';
 
 
 @NgModule({
@@ -17,7 +15,6 @@ import { MasonryGalleryModule } from 'ngx-masonry-gallery';
     CommonModule,
     FormsModule,
     IonicModule,
-    MasonryGalleryModule,
     PhotosPageRoutingModule
   ],
   declarations: [PhotosPage]

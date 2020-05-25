@@ -4,7 +4,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ngx-masonry-gallery [width]='200' [verticalGutter]="3" [images]='images'></ngx-masonry-gallery>
-
+<ion-content padding>
+  <div class="pins">
+    <div class="pin" *ngFor="let item of images; let i = index" >
+      <img [src]="item.imgSrc" (click)="fullscreen(item.imgSrc)">
+    </div>
+  </div>
+    
+  <p *ngIf="!images.length" class="empty-alert">No Photos found</p>
 </ion-content>
