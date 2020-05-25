@@ -1,7 +1,6 @@
 // // ion-content {
 // //   position: relative !important;
 // // }
-
 .main-layout {
   height: 100%;
   ion-row {
@@ -12,6 +11,7 @@
     }
   }
 }
+
 .center-image-sec {
   position: absolute;
   bottom: 0;
@@ -20,18 +20,59 @@
   top: 1%;
   right: 0;
   width: 85%;
-  img {
+  .center-image {
+    background-image: url("../../../assets/img/CM-BG-059-1.jpg");
+    margin-bottom: 1.5rem;
+    height: 78vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-left: 10px solid var(--ion-white-color);
+    border-right: 10px solid var(--ion-primary-color);
+    border-radius: 14px;
+    outline: 0;
+    img {
+      width: 100%;
+      // object-fit: contain;
+      // height: 70vh;
+      // position:relative;
+    }
+  }
+  .center-image:before {
+    content: "";
     width: 100%;
-    object-fit: contain;
-    height: 70vh;
+    height: 10px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 9;
+    background: linear-gradient(
+      to right,
+      var(--ion-white-color) 50%,
+      var(--ion-primary-color) 50%
+    );
+  }
+  .center-image::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 9;
+    background: linear-gradient(
+      to right,
+      var(--ion-white-color) 50%,
+      var(--ion-primary-color) 50%
+    );
   }
   .timer-sec {
-    background: #fff;
+    background: var(--ion-white-color);
     padding: 0.5rem;
     border-radius: 10px;
-    -webkit-box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
-    -moz-box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
-    box-shadow: 10px 13px 21px -5px rgba(204, 204, 204, 0.79);
+    -webkit-box-shadow: 15px 7px 21px -5px rgb(217, 216, 218);
+    -moz-box-shadow: 15px 7px 21px -5px rgb(217, 216, 218);
+    box-shadow: 15px 7px 21px -5px rgb(217, 216, 218);
     .time-size {
       font-size: 1.8rem;
       font-weight: 500;
@@ -55,12 +96,11 @@
       border-right: 0;
     }
   }
-
   .btn-right {
     text-align: right;
     margin: 1rem 0 0 0;
     .explore-btn {
-      --ion-color-base: #fff !important;
+      --ion-color-base: var(--ion-white-color) !important;
       background-color: var(--ion-nav-btn-color);
       font-size: 1rem;
       padding: 1rem 1rem;
