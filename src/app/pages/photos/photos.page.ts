@@ -35,5 +35,9 @@ export class PhotosPage implements OnInit {
   fullscreen(url){
     this.photoViewer.show(url, '', {share: false});
   }
+  
+  hideImage(e){
+    e.target.style.display = 'none';
+  }
 
 }

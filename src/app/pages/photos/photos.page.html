@@ -7,7 +7,7 @@
 <ion-content padding>
   <div class="pins">
     <div class="pin" *ngFor="let item of images; let i = index" >
-      <img [src]="item.imgSrc" (click)="fullscreen(item.imgSrc)">
+      <img [src]="item.imgSrc" (click)="fullscreen(item.imgSrc)" (error)="hideImage($event)">
     </div>
   </div>
     
