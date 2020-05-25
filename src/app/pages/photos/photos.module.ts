@@ -8,6 +8,8 @@ import { PhotosPageRoutingModule } from './photos-routing.module';
 
 import { PhotosPage } from './photos.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
