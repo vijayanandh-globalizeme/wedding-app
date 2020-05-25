@@ -13,7 +13,7 @@ export class PhotosPage implements OnInit {
 
   constructor(
     private photoService: PhotosService,
-    private photoViewer: PhotoViewer
+    public photoViewer: PhotoViewer
   ) { }
 
   ngOnInit() {
