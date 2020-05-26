@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Photos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="pins">
+    <div class="pin" *ngFor="let item of images; let i = index" >
+      <img [src]="item.imgSrc" (click)="fullscreen(item.imgSrc)" (error)="hideImage($event)">
+    </div>
+  </div>
+    
+  <p *ngIf="!images.length" class="empty-alert">No Photos found</p>
+</ion-content>

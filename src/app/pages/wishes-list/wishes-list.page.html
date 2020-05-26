@@ -14,13 +14,13 @@
   
 
   <ion-list>
-    <ion-item class="item ios in-list ion-focusable item-label hydrated"  [hidden]="!item" *ngFor="let item of wArray; let i = index" (click)="toggleWish()">
+    <ion-item class="item ios in-list ion-focusable item-label hydrated"  [hidden]="!item" *ngFor="let item of wArray; let i = index" [ngClass]="{'active': item.active}" (click)="toggleWish(item)">
       <ion-avatar slot="start" class="ios hydrated">
-        <img src="../../../assets/images/avatar-yoda.png">
+        <span class="fn-container">{{ item.name.charAt(0) }}</span>
       </ion-avatar>
       <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
         <h2>{{ item.name }}</h2>
-        <p [class]="isCollapse?'text-collapse':''">{{ item.content }}</p>
+        <p class="text-collapse">{{ item.content }}</p>
         <p class="align-text-right">{{  moment.utc(item.createdAt).format('lll')  }}</p>
       </ion-label>
     </ion-item>

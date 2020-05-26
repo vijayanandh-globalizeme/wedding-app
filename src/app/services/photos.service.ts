@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Wishes } from '../shared/Wishes';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Subject, Observable } from 'rxjs';
 import * as moment from 'moment-timezone';
@@ -7,9 +6,9 @@ import * as moment from 'moment-timezone';
 @Injectable({
   providedIn: 'root'
 })
-export class WishesService {
+export class PhotosService {
 
-  collectionName = 'wishes';
+  collectionName = 'photos';
   moment: any = moment;
 
   // Observable string sources
@@ -22,23 +21,15 @@ export class WishesService {
     private firestore: AngularFirestore
   ) { }
 
-  // Create
-  addWishes(record: Wishes) {
-    record.status = false;
-    record.createdAt = moment().tz('Asia/Kolkata').format();
-    return this.firestore.collection(this.collectionName).add(record);
-  }
-
   // Get List
-  getWishesList(): Observable<any> {
+  getPhotos(): Observable<any> {
     return this.firestore.collection(this.collectionName, 
-      ref => ref.where('status', '==', true).orderBy('createdAt','desc')
+      ref => ref.where('status', '==', true)
     ).snapshotChanges();
   }
 
   //To refresh wishes list
-  updateWishesList(){
+  refereshGallery(){
     this.subjectElem.next();
   }
-
 }

@@ -17,6 +17,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 // environment
 import { environment } from '../environments/environment';
 
+//Plugins
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,12 +29,13 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    PhotoViewer
   ],
   bootstrap: [AppComponent]
 })

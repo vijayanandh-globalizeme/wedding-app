@@ -47,8 +47,8 @@
   // --ion-nav-btn-color: #3c1053ff;
   // //====================//
   // //purple and rosepink  //
-  // --ion-primary-color: #3c1053ff;
-  // --ion-nav-btn-color: #df6589ff;
+  --ion-primary-color: #3c1053ff;
+  --ion-nav-btn-color: #df6589ff;
   // //====================//
   // //pinksalt and charcoal gray  //
   // --ion-primary-color: #fad0c9ff;
@@ -62,8 +62,8 @@
   // --ion-primary-color: #6e6e6dff;
   // --ion-nav-btn-color: #fad0c9ff;
   //====================//
-  --ion-primary-color: #2c5f2d;
-  --ion-nav-btn-color: #97bc62ff;
+  // --ion-primary-color: #2c5f2d;
+  // --ion-nav-btn-color: #97bc62ff;
   //===============//
 
   --ion-grey-color: #cccccc;
@@ -91,9 +91,40 @@ ion-grid {
 .justify-space-around {
   justify-content: space-around;
 }
-/* nav bar design */
-.nav-bar {
+/* menu bottom bar  design */
+ion-tab-bar {
   --background: var(--ion-nav-btn-color);
   color: var(--ion-white-color);
-  font-family: "Dancing Script", cursive;
+}
+
+// Icon Set
+.c-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  filter: invert(98%) sepia(21%) saturate(1%) hue-rotate(244deg)
+    brightness(116%) contrast(100%);
+}
+
+.c-icon.icon-calender {
+  background-image: url("../assets/icon/calendar.svg");
+}
+.c-icon.icon-images {
+  background-image: url("../assets/icon/images.svg");
+}
+.c-icon.icon-home {
+  background-image: url("../assets/icon/home.svg");
+}
+.c-icon.icon-pushpin {
+  background-image: url("../assets/icon/pushpin.svg");
+}
+.c-icon.icon-man {
+  background-image: url("../assets/icon/man.svg");
+}
+.c-icon.icon-woman {
+  background-image: url("../assets/icon/woman.svg");
+}
+.c-icon.icon-wish {
+  background-image: url("../assets/icon/telegram.svg");
 }
