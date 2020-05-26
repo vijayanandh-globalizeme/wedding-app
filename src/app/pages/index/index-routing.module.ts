@@ -22,6 +22,10 @@ const routes: Routes = [
         loadChildren: () => import('../wishes-list/wishes-list.module').then( m => m.WishesListPageModule)
       },
       {
+        path: 'wedding-info',
+        loadChildren: () => import('../wedding-info/wedding-info.module').then(m=>m.WeddingInfoPageModule)
+      },
+      {
         path: 'add-wishes',
         loadChildren: () => import('../add-wishes/add-wishes.module').then( m => m.AddWishesPageModule)
       }
