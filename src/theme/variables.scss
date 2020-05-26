@@ -7,6 +7,12 @@
 :root {
   /** Marriage App V4 **/
   --ion-white-color: #ffffff;
+  --ion-color-brown: #aa7942;
+  --ion-color-brown-rgb: 170,121,66;
+  --ion-color-brown-contrast: #000000;
+  --ion-color-brown-contrast-rgb: 0,0,0;
+  --ion-color-brown-shade: #966a3a;
+  --ion-color-brown-tint: #b38655;
   // --ion-primary-color: #d0dbd7;
   // --ion-nav-btn-color: #9fc9c0;
   //=======================//
@@ -68,6 +74,14 @@
 
   --ion-grey-color: #cccccc;
   --ion-font-family: "Montserrat", sans-serif;
+}
+.ion-color-brown {
+  --ion-color-base: var(--ion-color-brown);
+  --ion-color-base-rgb: var(--ion-color-brown-rgb);
+  --ion-color-contrast: var(--ion-color-brown-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-brown-contrast-rgb);
+  --ion-color-shade: var(--ion-color-brown-shade);
+  --ion-color-tint: var(--ion-color-brown-tint);
 }
 /* common css starts */
 ion-col {
