@@ -28,6 +28,18 @@ const routes: Routes = [
       {
         path: 'add-wishes',
         loadChildren: () => import('../add-wishes/add-wishes.module').then( m => m.AddWishesPageModule)
+      },
+      {
+        path: 'bride',
+        loadChildren: () => import('../bride-page/bride-page.module').then( m => m.BridePagePageModule)
+      },
+      {
+        path: 'groom',
+        loadChildren: () => import('../groom-page/groom-page.module').then( m => m.GroomPagePageModule)
+      },
+      {
+        path: 'photos',
+        loadChildren: () => import('../photos/photos.module').then( m => m.PhotosPageModule)
       }
     ]
   }

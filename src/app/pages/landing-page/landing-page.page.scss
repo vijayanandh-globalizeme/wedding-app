@@ -17,13 +17,13 @@
   bottom: 0;
   margin: auto;
   left: 0;
-  top: 1%;
+  top: 4%;
   right: 0;
   width: 85%;
   .center-image {
     background-image: url("../../../assets/img/CM-BG-059-1.jpg");
     margin-bottom: 1.5rem;
-    height: 78vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -74,7 +74,7 @@
     -moz-box-shadow: 15px 7px 21px -5px rgb(217, 216, 218);
     box-shadow: 15px 7px 21px -5px rgb(217, 216, 218);
     .time-size {
-      font-size: 1.8rem;
+      font-size: 1rem;
       font-weight: 500;
       color: var(--ion-nav-btn-color);
       margin: 0;
@@ -86,7 +86,7 @@
       }
       .time-measure {
         display: block;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: var(--ion-grey-color);
         font-weight: 600;
         text-align: center;
@@ -103,7 +103,7 @@
       --ion-color-base: var(--ion-white-color) !important;
       background-color: var(--ion-nav-btn-color);
       font-size: 1rem;
-      padding: 1rem 1rem;
+      padding: 0.8rem 1rem;
       border-radius: 14px;
       font-weight: bold;
       height: auto;

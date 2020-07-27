@@ -35,7 +35,8 @@
     "moment-timezone": "^0.5.28",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "cordova-ios": "^4.5.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.901.6",
@@ -67,6 +68,9 @@
       "cordova-plugin-camera": {},
       "cordova-plugin-firebase": {},
       "com-sarriaroman-photoviewer": {}
-    }
+    },
+    "platforms": [
+      "ios"
+    ]
   }
 }

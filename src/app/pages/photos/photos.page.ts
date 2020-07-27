@@ -33,7 +33,9 @@ export class PhotosPage implements OnInit {
   }
 
   fullscreen(url){
-    this.photoViewer.show(url, '', {share: false});
+    this.photoViewer.show('https://www.freakyjolly.com/wp-content/uploads/2017/08/cropped-fjlogo2.png');
+
+    // this.photoViewer.show(url, '', {share: false});
   }
   
   hideImage(e){

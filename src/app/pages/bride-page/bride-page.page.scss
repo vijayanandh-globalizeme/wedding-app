@@ -1,0 +1,70 @@
+ion-content{
+    --ion-background-color: #f8feff;
+    
+    ion-row.padding{
+        padding: 2rem 1rem 1rem;
+        
+        div.user-thumb{
+            border-radius: 8px;
+            box-shadow: 1px 6px 7px silver;
+            background: url('/assets/images/image-bride.jpg') no-repeat center;
+            background-size: cover;
+            height: 72vh;
+            width: 120%;
+        }
+
+        .details{
+            background: #fff;
+            position: absolute;
+            box-shadow: 1px 1px 5px #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            top: 4%;
+            height: 65vh;
+
+            p{
+                font-size: 0.86rem;
+                color: #7f7979;
+            }
+        }
+    }
+
+    ion-row{
+        h1{
+            margin: 0 1rem 0.5rem;
+            color: #df6589;
+        }
+        h2{
+            margin: 0 1rem 0.5rem;
+            font-size: 1.2rem;
+            color: #b3a4a9;
+        }
+    }
+}
+
+@media (max-width: 360px){
+    ion-content{
+        ion-row.padding{
+            div.user-thumb{
+                height: 70vh;
+            }
+            .details{
+                height: 63vh;
+
+                p{
+                    font-size: 0.7rem;
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        ion-row{
+            h1{
+                font-size: 1.3rem;
+            }
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
